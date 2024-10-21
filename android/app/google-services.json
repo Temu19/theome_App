@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "326691527533",
-    "project_id": "privatenotes-flutter-project-1",
-    "storage_bucket": "privatenotes-flutter-project-1.appspot.com"
+    "project_number": "154371143913",
+    "project_id": "auththeome",
+    "storage_bucket": "auththeome.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:326691527533:android:69e9d43b11632688ad5864",
+        "mobilesdk_app_id": "1:154371143913:android:441045535d6c553766d878",
         "android_client_info": {
           "package_name": "com.example.theome_fury_app"
         }
@@ -15,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDTMv8yQNTC2iaGkFLlgN60ANHUKH_oGx4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:326691527533:android:c1caca28510d7706ad5864",
-        "android_client_info": {
-          "package_name": "com.learnflutttem.privatenotes"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDTMv8yQNTC2iaGkFLlgN60ANHUKH_oGx4"
+          "current_key": "AIzaSyAL_Hh-0w1qfKJJdMCjx800itZoFgZChOs"
         }
       ],
       "services": {

@@ -41,46 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBZ9WnYWgNVaqL7xiD7yWBVMpfXKTQzVdY',
-    appId: '1:326691527533:web:7214c44fd85535c9ad5864',
-    messagingSenderId: '326691527533',
-    projectId: 'privatenotes-flutter-project-1',
-    authDomain: 'privatenotes-flutter-project-1.firebaseapp.com',
-    storageBucket: 'privatenotes-flutter-project-1.appspot.com',
+    apiKey: 'AIzaSyCjcOKgdq0_3C44Uusv8vPrdKU3i7su92w',
+    appId: '1:154371143913:web:4ae22660d1fbe69f66d878',
+    messagingSenderId: '154371143913',
+    projectId: 'auththeome',
+    authDomain: 'auththeome.firebaseapp.com',
+    storageBucket: 'auththeome.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDTMv8yQNTC2iaGkFLlgN60ANHUKH_oGx4',
-    appId: '1:326691527533:android:69e9d43b11632688ad5864',
-    messagingSenderId: '326691527533',
-    projectId: 'privatenotes-flutter-project-1',
-    storageBucket: 'privatenotes-flutter-project-1.appspot.com',
+    apiKey: 'AIzaSyAL_Hh-0w1qfKJJdMCjx800itZoFgZChOs',
+    appId: '1:154371143913:android:441045535d6c553766d878',
+    messagingSenderId: '154371143913',
+    projectId: 'auththeome',
+    storageBucket: 'auththeome.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDWuk7jMpum2Tun64y6b0nf4D3PgUcOYPM',
-    appId: '1:326691527533:ios:9c73c0db91c24572ad5864',
-    messagingSenderId: '326691527533',
-    projectId: 'privatenotes-flutter-project-1',
-    storageBucket: 'privatenotes-flutter-project-1.appspot.com',
+    apiKey: 'AIzaSyBCTQbmuwd6Uq8n-d4IXe5ndL1eHjNf3s0',
+    appId: '1:154371143913:ios:034ebe309112112766d878',
+    messagingSenderId: '154371143913',
+    projectId: 'auththeome',
+    storageBucket: 'auththeome.appspot.com',
     iosBundleId: 'com.example.theomeFuryApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDWuk7jMpum2Tun64y6b0nf4D3PgUcOYPM',
-    appId: '1:326691527533:ios:9c73c0db91c24572ad5864',
-    messagingSenderId: '326691527533',
-    projectId: 'privatenotes-flutter-project-1',
-    storageBucket: 'privatenotes-flutter-project-1.appspot.com',
+    apiKey: 'AIzaSyBCTQbmuwd6Uq8n-d4IXe5ndL1eHjNf3s0',
+    appId: '1:154371143913:ios:034ebe309112112766d878',
+    messagingSenderId: '154371143913',
+    projectId: 'auththeome',
+    storageBucket: 'auththeome.appspot.com',
     iosBundleId: 'com.example.theomeFuryApp',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBZ9WnYWgNVaqL7xiD7yWBVMpfXKTQzVdY',
-    appId: '1:326691527533:web:622faf6712d8ca2fad5864',
-    messagingSenderId: '326691527533',
-    projectId: 'privatenotes-flutter-project-1',
-    authDomain: 'privatenotes-flutter-project-1.firebaseapp.com',
-    storageBucket: 'privatenotes-flutter-project-1.appspot.com',
+    apiKey: 'AIzaSyCjcOKgdq0_3C44Uusv8vPrdKU3i7su92w',
+    appId: '1:154371143913:web:b37de59e70bfad3d66d878',
+    messagingSenderId: '154371143913',
+    projectId: 'auththeome',
+    authDomain: 'auththeome.firebaseapp.com',
+    storageBucket: 'auththeome.appspot.com',
   );
+
 }

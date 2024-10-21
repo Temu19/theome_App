@@ -3,7 +3,7 @@ import 'package:theome_fury_app/pages/home_page.dart';
 //import 'package:theome_fury_app/pages/auth_page.dart';
 //import 'package:theome_fury_app/pages/first_page.dart';
 //import 'package:theome_fury_app/pages/home_page.dart';
-import 'package:theome_fury_app/pages/login_page.dart';
+//import 'package:theome_fury_app/pages/login_page.dart';
 //import 'package:theome_fury_app/pages/register_page.dart';
 
 class IntroPage extends StatelessWidget {
@@ -56,7 +56,7 @@ class IntroPage extends StatelessWidget {
                 onTap: () => Navigator.push(
                   context, 
                   MaterialPageRoute(
-                  builder: (context)=>     LogInPage(),
+                  builder: (context)=> const HomePage() ,
                   )
                   ),
                 child: Container(

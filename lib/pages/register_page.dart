@@ -5,28 +5,22 @@ import 'package:theome_fury_app/components/mybutton.dart';
 import 'package:theome_fury_app/components/mytextfield.dart';
 import 'package:theome_fury_app/components/squaretiles.dart';
 
-class LogInPage extends StatefulWidget {
+class RegisterPage extends StatefulWidget {
    final Function()? onTap;
-   const LogInPage({super.key,required this.onTap});
+   const RegisterPage({super.key,required this.onTap});
 
   @override
-  State<LogInPage> createState() => _LogInPageState();
+  State<RegisterPage> createState() => _LogInPageState();
 }
 
-
- 
-
-
-
-
-
-class _LogInPageState extends State<LogInPage> {
+class _LogInPageState extends State<RegisterPage> {
 
 
          final emailController = TextEditingController();
          final passwordController = TextEditingController();
-
-void signUserIn()  async {
+         final confirmpasswordController = TextEditingController();
+  
+void signUserUp()  async {
 
    showDialog(
     context: context,
@@ -36,12 +30,23 @@ void signUserIn()  async {
       );
     },
     );
+
+    //create user
      try
      {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-                email: emailController.text,
-                password: passwordController.text,
-     );
+      if(confirmpasswordController.text == passwordController.text){
+
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+            email: emailController.text, 
+            password: passwordController.text,
+            );
+
+      }else{
+        
+        showErrorMessage("Passwords don't match!");
+     
+
+      }
        // ignore: use_build_context_synchronously
        Navigator.pop(context);
      }on FirebaseAuthException catch (e){
@@ -88,12 +93,12 @@ void signUserIn()  async {
                 const SizedBox(height: 50),
                Image.asset(
                       'lib/images/logotheo.png',
-                        height:200, 
+                        height:150, 
                       ),
              
                 //welcome back enjoy your time with us
               Text(
-                "Welcome Back Desciple of Christ",
+                "Let's get you registered",
                  style: TextStyle(
                   color:Colors.grey[800],
                   fontSize: 16,
@@ -112,28 +117,21 @@ void signUserIn()  async {
                 obsecureText:true,
                 controller:passwordController,
               ),
-          
-                //forgot password
-           const SizedBox(height: 10),
-             const  Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 25),
-                child:    Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                       Text(
-                        "Forgot Password?",
-                         style: TextStyle(
-                          color:Color.fromARGB(255, 122, 136, 240),
-                         ),
-                         ),
-                    ],
-                  ),
+             const SizedBox(height: 15),
+                //confirm password
+                  TextFieldComponent(
+                hintText:"Confirm Your Password:",
+                obsecureText:true,
+                controller:confirmpasswordController,
               ),
-               const SizedBox(height: 25),
+                //forgot password
+     
+            
+               const SizedBox(height: 20),
                 //sign in button
                MyButton(
-               onTap: signUserIn,
-               text: "Sign IN",
+               onTap: signUserUp,
+               text:'Sign UP'
               ),
                const SizedBox(height: 25),
                 //continue with 
@@ -175,7 +173,7 @@ void signUserIn()  async {
                 children: [
                     SquareTile(imagePath: 'lib/images/google.png'),
                     SizedBox(width: 30),
-                    SquareTile(imagePath: 'lib/images/apple.png'),
+                    SquareTile(imagePath: 'lib/images/appl.png'),
              
                ],),
                const SizedBox(height: 25),
@@ -183,16 +181,16 @@ void signUserIn()  async {
                 Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                  children: [
-                  const  Text("Don't have an Account"), 
+                  const  Text("Already Registered"), 
                    const  SizedBox(width: 4),
                    GestureDetector(
                     onTap: widget.onTap,
                      child: const  Text(
-                      "Regiter here",
+                      "Login Now",
                      style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.bold,
-                       fontSize:18,
+                      fontSize:18,
                       
                      ),),
                    ),

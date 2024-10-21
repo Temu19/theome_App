@@ -10,7 +10,9 @@ class HomePage extends StatefulWidget {
 final user = FirebaseAuth.instance.currentUser!;
 
 void signUserOut(){
+  
   FirebaseAuth.instance.signOut();
+
 }
 
 
