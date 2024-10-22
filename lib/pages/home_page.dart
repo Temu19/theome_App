@@ -276,7 +276,57 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
               ),
-              //fourh tile
+              //fourth tile
+               Container(
+                  margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 14,),
+                  height: 200,
+                  decoration: BoxDecoration(
+                   color: Colors.blue.withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow:
+                    [ 
+                      BoxShadow(
+                      color:  Colors.grey.withOpacity(0.3),
+                      spreadRadius: 2,
+                      blurRadius:5,
+                      offset: const Offset(0, 3),
+                      
+                        ),
+                       ],
+                       image: DecorationImage(
+                        image: const AssetImage('lib/images/metaa.webp'),
+                        fit: BoxFit.cover,
+                        colorFilter: ColorFilter.mode(
+                          Colors.black.withOpacity(0.3),
+                          BlendMode.darken,
+                        ),
+                       )
+            
+                   ),
+                   //inner padding
+                  //  child:const Padding(
+                  //   padding:EdgeInsets.symmetric(horizontal: 25),
+                  //  )
+                  child: Center(
+                    child: Text(
+                      "coming soon Chat With Community",
+                    
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 10,
+                            color: Colors.black.withOpacity(0.7),
+                            offset:const Offset(0, 4) 
+                          )
+                        ]
+                      ),
+                    ),
+                  ),
+              ),
+              //fifth tile
                Container(
                   margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 14,),
                   height: 200,
