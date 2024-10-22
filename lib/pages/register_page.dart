@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:theome_fury_app/components/mybutton.dart';
 import 'package:theome_fury_app/components/mytextfield.dart';
 import 'package:theome_fury_app/components/squaretiles.dart';
+import 'package:theome_fury_app/services/auth_services.dart';
 
 class RegisterPage extends StatefulWidget {
    final Function()? onTap;
@@ -167,13 +168,17 @@ void signUserUp()  async {
                   ),
                 ),
                  const SizedBox(height: 25),
-                //google and apple sign in button
-           const     Row(
+                //google and apple sign in button//
+                Row(
             mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                    SquareTile(imagePath: 'lib/images/google.png'),
-                    SizedBox(width: 30),
-                    SquareTile(imagePath: 'lib/images/appl.png'),
+                    SquareTile(imagePath: 'lib/images/google.png',
+                    onTap:() => AuthService().signInWithGoogle(),
+                    ),
+                    const SizedBox(width: 30),
+                    SquareTile(imagePath: 'lib/images/appl.png',
+                    onTap:()=>{},
+                    ),
              
                ],),
                const SizedBox(height: 25),

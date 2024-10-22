@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:theome_fury_app/components/mybutton.dart';
 import 'package:theome_fury_app/components/mytextfield.dart';
 import 'package:theome_fury_app/components/squaretiles.dart';
+import 'package:theome_fury_app/services/auth_services.dart';
 
 class LogInPage extends StatefulWidget {
    final Function()? onTap;
@@ -170,12 +171,19 @@ void signUserIn()  async {
                 ),
                  const SizedBox(height: 25),
                 //google and apple sign in button
-           const     Row(
+                Row(
             mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                    SquareTile(imagePath: 'lib/images/google.png'),
-                    SizedBox(width: 30),
-                    SquareTile(imagePath: 'lib/images/apple.png'),
+                    SquareTile(
+                      imagePath: 'lib/images/google.png',
+                     onTap:() => AuthService().signInWithGoogle(),),
+                    const SizedBox(width: 30),
+                    SquareTile( 
+                      onTap:(){},
+                      imagePath: 'lib/images/apple.png',
+                     
+
+                      ),
              
                ],),
                const SizedBox(height: 25),
