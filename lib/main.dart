@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:theome_fury_app/pages/auth_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:theome_fury_app/themes/theme_provider.dart';
 //import 'package:theome_fury_app/pages/intro_page.dart';
 import 'firebase_options.dart';
 
@@ -11,7 +13,15 @@ void main() async{
   options: DefaultFirebaseOptions.currentPlatform,
 );
 
-  runApp(const MyApp());
+  runApp(
+    
+    ChangeNotifierProvider(
+      
+      create: (context) => ThemeProvider(),
+      child: const MyApp(
+
+   ),
+  ));
 }
 
 
@@ -25,9 +35,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
         debugShowCheckedModeBanner: false,
-         home: AuthPage(),
+         home: const AuthPage(),
+         theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }
