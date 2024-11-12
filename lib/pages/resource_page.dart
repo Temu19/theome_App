@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 //import 'package:theome_fury_app/components/mydrawer.dart';
 import 'package:theome_fury_app/components/square.dart';
